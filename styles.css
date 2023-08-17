@@ -3,3 +3,44 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #26292b;
+}
+
+main {
+  background-color: #2e3239;
+  padding: 24px;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+
+  margin: 6px;
+  padding: auto;
+
+  border: none;
+  border-radius: 100%;
+
+  font-size: 32pt;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-accion {
+  background-color: #a2b2ee;
+  box-shadow: 0px 2px 10px #5f7adb;
+}
+
+.btn-numero {
+  box-shadow: 0px 2px 10px #5f7adb;
+}
+
+#btn-igual {
+  background-color: #5f7adb;
+  box-shadow: 0px 2px 5px #ddd;
+}
