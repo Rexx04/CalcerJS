@@ -38,23 +38,13 @@ function masMenos() {
   }
 }
 
+function punto() {
+    if(pantalla.innerHTML.length < 9 && !pantalla.innerHTML.includes(".")) {
+        pantalla.innerHTML += ".";
+    }
+}
+
 function teclearOperacion(op) {
-  switch (op) {
-    case Operadores.Multiplicar:
-      Operador = Operadores.Multiplicar;
-      break;
-    case Operadores.Dividir:
-      Operador = Operadores.Dividir;
-      break;
-    case Operadores.Sumar:
-      Operador = Operadores.Sumar;
-      break;
-    case Operadores.Restar:
-      Operador = Operadores.Restar;
-      break;
-    case Operadores.Porcentaje:
-      Operador = Operadores.Porcentaje;
-      break;
-  }
+  Operador = op;
   Operando = parseFloat(pantalla.innerHTML);
 }
