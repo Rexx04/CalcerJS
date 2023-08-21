@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
+    <link rel="shortcut icon" href="./res/favicon.png" type="image/x-icon" />
     <title>CalcerJS</title>
   </head>
   <body>
@@ -23,38 +24,78 @@
           <button class="btn-accion" id="btn-bs" onclick="borrar()">
             <img src="./res/backspace.png" alt="" />
           </button>
-          <button class="btn-accion" id="btn-porcentaje">
+          <button
+            class="btn-accion"
+            id="btn-porcentaje"
+            onclick="teclearOperacion(5)"
+          >
             <img src="./res/porcentaje.png" alt="" />
           </button>
-          <button class="btn-accion" id="btn-dividir">
+          <button
+            class="btn-accion"
+            id="btn-dividir"
+            onclick="teclearOperacion(2)"
+          >
             <img src="./res/dividir.png" alt="" />
           </button>
 
-          <button class="btn-numero" id="btn-7" onclick="teclearNumero(7)">7</button>
-          <button class="btn-numero" id="btn-8" onclick="teclearNumero(8)">8</button>
-          <button class="btn-numero" id="btn-9" onclick="teclearNumero(9)">9</button>
-          <button class="btn-accion" id="btn-multiplicar">
+          <button class="btn-numero" id="btn-7" onclick="teclearNumero(7)">
+            7
+          </button>
+          <button class="btn-numero" id="btn-8" onclick="teclearNumero(8)">
+            8
+          </button>
+          <button class="btn-numero" id="btn-9" onclick="teclearNumero(9)">
+            9
+          </button>
+          <button
+            class="btn-accion"
+            id="btn-multiplicar"
+            onclick="teclearOperacion(1)"
+          >
             <img src="./res/multiplicar.png" alt="" />
           </button>
 
-          <button class="btn-numero" id="btn-4" onclick="teclearNumero(4)">4</button>
-          <button class="btn-numero" id="btn-5" onclick="teclearNumero(5)">5</button>
-          <button class="btn-numero" id="btn-6" onclick="teclearNumero(6)">6</button>
-          <button class="btn-accion" id="btn-restar">
+          <button class="btn-numero" id="btn-4" onclick="teclearNumero(4)">
+            4
+          </button>
+          <button class="btn-numero" id="btn-5" onclick="teclearNumero(5)">
+            5
+          </button>
+          <button class="btn-numero" id="btn-6" onclick="teclearNumero(6)">
+            6
+          </button>
+          <button
+            class="btn-accion"
+            id="btn-restar"
+            onclick="teclearOperacion(4)"
+          >
             <img src="./res/restar.png" alt="" />
           </button>
 
-          <button class="btn-numero" id="btn-1" onclick="teclearNumero(1)">1</button>
-          <button class="btn-numero" id="btn-2" onclick="teclearNumero(2)">2</button>
-          <button class="btn-numero" id="btn-3" onclick="teclearNumero(3)">3</button>
-          <button class="btn-accion" id="btn-sumar">
+          <button class="btn-numero" id="btn-1" onclick="teclearNumero(1)">
+            1
+          </button>
+          <button class="btn-numero" id="btn-2" onclick="teclearNumero(2)">
+            2
+          </button>
+          <button class="btn-numero" id="btn-3" onclick="teclearNumero(3)">
+            3
+          </button>
+          <button
+            class="btn-accion"
+            id="btn-sumar"
+            onclick="teclearOperacion(1)"
+          >
             <img src="./res/sumar.png" alt="" />
           </button>
 
-          <button class="btn-accion" id="btn-masmenos">
+          <button class="btn-accion" id="btn-masmenos" onclick="masMenos()">
             <img src="./res/masmenos.png" alt="" />
           </button>
-          <button class="btn-numero" id="btn-0" onclick="teclearNumero(0)">0</button>
+          <button class="btn-numero" id="btn-0" onclick="teclearNumero(0)">
+            0
+          </button>
           <button class="btn-accion" id="btn-punto">.</button>
           <button class="btn-accion" id="btn-igual">
             <img src="./res/igual.png" alt="" />
