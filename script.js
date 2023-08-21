@@ -7,8 +7,8 @@ const Operadores = {
   Dividir: 2,
   Sumar: 3,
   Restar: 4,
-  Porcentaje: 5,
 };
+
 let Operando = 0;
 let Operador = 0;
 
@@ -27,7 +27,11 @@ function borrarTodo() {
 }
 
 function borrar() {
-  pantalla.innerHTML = pantalla.innerHTML.slice(0, -1);
+  if (pantalla.innerHTML.length > 1) {
+    pantalla.innerHTML = pantalla.innerHTML.slice(0, -1);
+  } else {
+    borrarTodo();
+  }
 }
 
 function masMenos() {
@@ -39,12 +43,63 @@ function masMenos() {
 }
 
 function punto() {
-    if(pantalla.innerHTML.length < 9 && !pantalla.innerHTML.includes(".")) {
-        pantalla.innerHTML += ".";
-    }
+  if (pantalla.innerHTML.length < 9 && !pantalla.innerHTML.includes(".")) {
+    pantalla.innerHTML += ".";
+  }
 }
 
 function teclearOperacion(op) {
   Operador = op;
   Operando = parseFloat(pantalla.innerHTML);
+  borrarTodo();
+}
+
+function igual() {
+  switch (Operador) {
+    case Operadores.Multiplicar:
+      pantalla.innerHTML = (
+        Operando * parseFloat(pantalla.innerHTML)
+      ).toString();
+      break;
+    case Operadores.Dividir:
+      if (parseFloat(pantalla.innerHTML) === 0) {
+        alert("División entre cero. Es imposible.");
+        borrarTodo();
+      } else {
+        pantalla.innerHTML = (
+          Operando / parseFloat(pantalla.innerHTML)
+        ).toString();
+      }
+      break;
+    case Operadores.Sumar:
+      pantalla.innerHTML = (
+        Operando + parseFloat(pantalla.innerHTML)
+      ).toString();
+      break;
+    case Operadores.Restar:
+      pantalla.innerHTML = (
+        Operando - parseFloat(pantalla.innerHTML)
+      ).toString();
+      break;
+  }
+}
+
+function porcentaje() {
+  switch (Operadores) {
+    case Operadores.Multiplicar:
+      Operador = Operadores.Multiplicar;
+      break;
+    case Operadores.Dividir:
+      Operador = Operadores.Dividir;
+      break;
+    case Operadores.Sumar:
+      Operador = Operadores.Sumar;
+      break;
+    case Operadores.Restar:
+      Operador = Operadores.Restar;
+      break;
+    case Operadores.Porcentaje:
+      Operador = Operadores.Porcentaje;
+      break;
+  }
 }
