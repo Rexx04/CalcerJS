@@ -14,19 +14,13 @@
           <h1>CalcerJS</h1>
         </header>
         <section id="contenedor-pantalla">
-          <input
-            type="number"
-            name="pantalla"
-            id="pantalla"
-            placeholder="0"
-            disabled
-          />
+          <p id="pantalla">0</p>
         </section>
         <section id="contenedor-teclado">
-          <button class="btn-accion" id="btn-borrar">
+          <button class="btn-accion" id="btn-borrar" onclick="borrarTodo()">
             <img src="./res/borrar.png" alt="" />
           </button>
-          <button class="btn-accion" id="btn-bs">
+          <button class="btn-accion" id="btn-bs" onclick="borrar()">
             <img src="./res/backspace.png" alt="" />
           </button>
           <button class="btn-accion" id="btn-porcentaje">
@@ -36,23 +30,23 @@
             <img src="./res/dividir.png" alt="" />
           </button>
 
-          <button class="btn-numero" id="btn-7">7</button>
-          <button class="btn-numero" id="btn-8">8</button>
-          <button class="btn-numero" id="btn-9">9</button>
+          <button class="btn-numero" id="btn-7" onclick="teclearNumero(7)">7</button>
+          <button class="btn-numero" id="btn-8" onclick="teclearNumero(8)">8</button>
+          <button class="btn-numero" id="btn-9" onclick="teclearNumero(9)">9</button>
           <button class="btn-accion" id="btn-multiplicar">
             <img src="./res/multiplicar.png" alt="" />
           </button>
 
-          <button class="btn-numero" id="btn-4">4</button>
-          <button class="btn-numero" id="btn-5">5</button>
-          <button class="btn-numero" id="btn-6">6</button>
+          <button class="btn-numero" id="btn-4" onclick="teclearNumero(4)">4</button>
+          <button class="btn-numero" id="btn-5" onclick="teclearNumero(5)">5</button>
+          <button class="btn-numero" id="btn-6" onclick="teclearNumero(6)">6</button>
           <button class="btn-accion" id="btn-restar">
             <img src="./res/restar.png" alt="" />
           </button>
 
-          <button class="btn-numero" id="btn-1">1</button>
-          <button class="btn-numero" id="btn-2">2</button>
-          <button class="btn-numero" id="btn-3">3</button>
+          <button class="btn-numero" id="btn-1" onclick="teclearNumero(1)">1</button>
+          <button class="btn-numero" id="btn-2" onclick="teclearNumero(2)">2</button>
+          <button class="btn-numero" id="btn-3" onclick="teclearNumero(3)">3</button>
           <button class="btn-accion" id="btn-sumar">
             <img src="./res/sumar.png" alt="" />
           </button>
@@ -60,7 +54,7 @@
           <button class="btn-accion" id="btn-masmenos">
             <img src="./res/masmenos.png" alt="" />
           </button>
-          <button class="btn-numero" id="btn-0">0</button>
+          <button class="btn-numero" id="btn-0" onclick="teclearNumero(0)">0</button>
           <button class="btn-accion" id="btn-punto">.</button>
           <button class="btn-accion" id="btn-igual">
             <img src="./res/igual.png" alt="" />

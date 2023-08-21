@@ -1,72 +1,91 @@
+/* Colores */
+:root {
+  --color-fondo-contenedor: #26292b;
+  --color-fondo-main: #2e3239;
+  --color-texto-h1: #a2b2ee;
+  --color-fondo-pantalla: #ddd;
+  --color-borde-pantalla: #5f7adb;
+  --color-sombra-botones: #5f7adb;
+  --color-sombra-boton-igual: #ddd;
+}
+
+/* Reset general */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Contenedor principal */
 #contenedor {
-  background-color: #26292b;
+  background-color: var(--color-fondo-contenedor);
   width: 100vw;
   height: 100vh;
-
   display: grid;
   place-items: center;
 }
 
+/* Área de contenido principal */
 main {
-  background-color: #2e3239;
+  background-color: var(--color-fondo-main);
   padding: 24px;
   width: 348px;
-
   border-radius: 12px;
-  box-shadow: 0px 2px 30px #5f7adb;
+  box-shadow: 0px 5px 20px var(--color-sombra-botones);
 }
 
+/* Encabezado */
 h1 {
-  color: #a2b2ee;
+  color: var(--color-texto-h1);
   text-align: center;
   margin: 12px auto 24px;
 }
 
+/* Pantalla */
 #pantalla {
-    margin: auto;
-    width: 100%;
-    margin-bottom: 24px;
-
-    font-size: 40pt;
-    text-align: right;
-    font-family: monospace;
-}
-
-button {
-  width: 60px;
-  height: 60px;
-
-  margin: 6px;
-  padding: auto;
-
-  border: none;
-  border-radius: 100%;
-
-  font-size: 32pt;
+  margin: auto;
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 24px;
+  background-color: var(--color-fondo-pantalla);
+  border: 1px solid var(--color-borde-pantalla);
+  border-radius: 10px;
+  font-size: 40pt;
+  text-align: right;
   font-family: monospace;
 }
 
+/* Botones */
+button {
+  width: 60px;
+  height: 60px;
+  margin: 6px;
+  border: none;
+  border-radius: 100%;
+  font-size: 32pt;
+  font-family: monospace;
+  box-shadow: 0px 2px 10px var(--color-sombra-botones);
+}
+
+/* Imágenes en botones */
 img {
   width: 32px;
   height: 32px;
 }
 
+/* Botón de acción */
 .btn-accion {
-  background-color: #a2b2ee;
-  box-shadow: 0px 2px 10px #5f7adb;
+  background-color: var(--color-texto-h1);
 }
 
+/* Botón de número */
 .btn-numero {
-  box-shadow: 0px 2px 10px #5f7adb;
+  background-color: var(--color-fondo-pantalla);
+  color: var(--color-fondo-contenedor);
 }
 
+/* Botón igual */
 #btn-igual {
-  background-color: #5f7adb;
-  box-shadow: 0px 2px 5px #ddd;
+  background-color: var(--color-borde-pantalla);
+  box-shadow: 0px 2px 5px var(--color-sombra-boton-igual);
 }
